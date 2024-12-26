@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "TooGoodToGoClone",
+    "slug": "TooGoodToGoClone",
+    "scheme": "TooGoodToGoClone",
+    "version": "1.0.0",
+    "newArchEnabled": true,
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "extra": {
+      "ADMIN_EMAIL": "souley.yacef@gmail.com",
+      "ADMIN_PASSWORD": "so"
+    },
+  "runtimeVersion":{
+    "policy": "sdkVersion"
+  },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
