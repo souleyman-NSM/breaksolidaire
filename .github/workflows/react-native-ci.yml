@@ -1,0 +1,60 @@
+name: React Native CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  android-build:
+    name: Build Android
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install --legacy-peer-deps
+
+    - name: Install Android SDK
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+        api-level: 31
+        target: default
+        arch: x86_64
+
+    - name: Build Android
+      run: cd android && ./gradlew assembleRelease
+
+  ios-build:
+    name: Build iOS
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install --legacy-peer-deps
+
+    - name: Install CocoaPods
+      run: |
+        cd ios
+        pod install
+
+    - name: Build iOS
+      run: cd ios && xcodebuild -workspace YourProject.xcworkspace -scheme YourProject -sdk iphoneos -configuration Release archive -archivePath $PWD/build/YourProject.xcarchive
