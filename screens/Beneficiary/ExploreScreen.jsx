@@ -48,7 +48,7 @@ export default function ExploreScreen({ navigation }) {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Explorez les paniers disponibles</Text>
-        <Image source={images.logoSmall} style={styles.logo} />
+        
       </View>
       <FlatList
         data={Object.keys(basketsByRestaurant)}
@@ -101,10 +101,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: '#FFFFFF',
     marginBottom: 15,
-  },
-  logo: {
-    width: 100,
-    height: 50,
   },
   restaurantSection: {
     marginBottom: 20,

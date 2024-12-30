@@ -1,0 +1,3 @@
+/home/souleyman/breaksolidaire/android/app/.cxx/Debug/105uvq52/x86/CMakeFiles/appmodules.dir
+/home/souleyman/breaksolidaire/android/app/.cxx/Debug/105uvq52/x86/CMakeFiles/edit_cache.dir
+/home/souleyman/breaksolidaire/android/app/.cxx/Debug/105uvq52/x86/CMakeFiles/rebuild_cache.dir
